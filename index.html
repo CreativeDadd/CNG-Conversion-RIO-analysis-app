@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CNG ROI Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Pre-App Password UI -->
+    <div id="password-screen" class="container">
+        
+        <div style="max-width: 10rem; margin: auto;">
+            <img style="width: 9rem; height: 7rem;" src="logo.jpg" alt="Companylogo">
+        </div>
+        <h3 style="text-align: center;">Welcome!</h3>
+
+        <h1>Please Enter Authorized Access Key:</h1>
+        <div class="input-group">
+            <label for="access-key">Access Key</label>
+            <input type="password" id="access-key" placeholder="Enter your key">
+        </div>
+        <button type="button" onclick="checkPassword()">Enter</button>
+        <p id="error-message" style="color: red; display: none;">Incorrect Access Key. Please try again.</p>
+    </div>
+
+    <!-- Main App UI -->
+    <div id="app-screen" class="container" style="display: none;">
+        <div style="max-width: 10rem; margin: auto;">
+            <img style="width: 9rem; height: 7rem;" src="logo.jpg" alt="Companylogo">
+        </div>
+        <h1>CNG ROI Calculator</h1>
+        <form id="roi-form">
+            <div class="input-group">
+                <label for="cylinder">Number of Cylinders</label>
+                <input type="number" id="cylinder" min="4" max="8" placeholder="4 or 6">
+            </div>
+            <div class="input-group">
+                <label for="kilometers">Kilometers Covered Per Month</label>
+                <input type="number" id="kilometers" placeholder="8500">
+            </div>
+            <div class="input-group">
+                <label for="cng-price">Current Price of CNG (NGN per scm)</label>
+                <input type="number" id="cng-price" placeholder="230">
+            </div>
+            <div class="input-group">
+                <label for="petrol-price">Current Price of Petrol (NGN per liter)</label>
+                <input type="number" id="petrol-price" placeholder="910">
+            </div>
+            <div class="input-group">
+                <label for="conversion-cost">Conversion Cost (NGN)</label>
+                <input type="number" id="conversion-cost" placeholder="Conversion cost">
+            </div>
+            <button type="button" onclick="calculateROI()">Calculate ROI</button>
+        </form>
+
+        <div class="result-grid">
+            <h2>Result:</h2>
+            <div class="result-item">
+                <strong>ROI after 6 months: </strong><span id="roi-output"></span>
+            </div>
+            <div class="result-item">
+                <strong>Savings per day: </strong><span id="savings-per-day"></span>
+            </div>
+            <div class="result-item">
+                <strong>Savings per week: </strong><span id="savings-per-week"></span>
+            </div>
+            <div class="result-item">
+                <strong>Savings per month: </strong><span id="savings-per-month"></span>
+            </div>
+            <div class="result-item">
+                <strong>Breakeven time: </strong><span id="breakeven-time"></span>
+            </div>
+            <div >
+                <strong>...great technologies, greater profits.</strong>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
