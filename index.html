@@ -8,10 +8,11 @@
 </head>
 <body>
     <!-- Pre-App Password UI -->
-    <div id="password-screen" class="container">
+<div class="access-body">
+    <div id="password-screen" class="container1">
         
         <div style="max-width: 10rem; margin: auto;">
-            <img style="width: 9rem; height: 7rem;" src="logo.jpg" alt="Companylogo">
+            <img style="width: 9rem; height: 7rem; box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);" src="logo.jpg" alt="Companylogo">
         </div>
         <h3 style="text-align: center;">Welcome!</h3>
 
@@ -23,8 +24,10 @@
         <button type="button" onclick="checkPassword()">Enter</button>
         <p id="error-message" style="color: red; display: none;">Incorrect Access Key. Please try again.</p>
     </div>
+</div>
 
     <!-- Main App UI -->
+     <div class="app-body">
     <div id="app-screen" class="container" style="display: none;">
         <div style="max-width: 10rem; margin: auto;">
             <img style="width: 9rem; height: 7rem;" src="logo.jpg" alt="Companylogo">
@@ -69,13 +72,14 @@
                 <strong>Savings per month: </strong><span id="savings-per-month"></span>
             </div>
             <div class="result-item">
-                <strong>Breakeven time: </strong><span id="breakeven-time"></span>
+                <strong>Time to Recover Your Invested Money: </strong><span id="breakeven-time"></span>
             </div>
             <div >
                 <strong>...great technologies, greater profits.</strong>
             </div>
         </div>
     </div>
+</div>
 
     <script src="script.js"></script>
 </body>

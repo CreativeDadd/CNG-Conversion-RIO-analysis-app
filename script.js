@@ -78,11 +78,36 @@
 // Strong password that is easy to remember for a coder
 const fuelgetprice = "NGN910.";
 
+// function checkPassword() {
+//     const enteredKey = document.getElementById('access-key').value;
+
+//     if (enteredKey === fuelgetprice ) {
+//         document.getElementById('password-screen').style.display = 'none';
+//         document.getElementById('password-screen').classList("password-screen").remove;
+        
+//         document.getElementById('app-screen').style.display = 'block';
+//     } else {
+//         document.getElementById('error-message').style.display = 'block';
+//     }
+// }
+
+
+
+
 function checkPassword() {
     const enteredKey = document.getElementById('access-key').value;
 
-    if (enteredKey === fuelgetprice ) {
+    if (enteredKey === fuelgetprice) {
+        // Hide the password screen
         document.getElementById('password-screen').style.display = 'none';
+
+        // Remove the access-body element from the DOM
+        const accessBody = document.querySelector('.access-body');
+        if (accessBody) {
+            accessBody.remove(); // Remove the access-body element
+        }
+
+        // Show the app screen
         document.getElementById('app-screen').style.display = 'block';
     } else {
         document.getElementById('error-message').style.display = 'block';
